@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-lg">
+    <div class="container-fluid">
+        <!-- Logo ou título -->
+        <a class="navbar-brand" href="{% url 'listar_clientes' %}">
+            <h3 class="mb-0 fw-bold">Clientes</h3>
+        </a>
+
+        <!-- Botão de Cadastrar Cliente -->
+        <div class="d-flex align-items-center">
+            <a class="btn btn-outline-light btn-lg rounded-pill px-4 py-2 ms-3 text-nowrap shadow-hover" href="{% url 'cadastrar_cliente' %}">
+                <i class="bi bi-person-plus" style="font-size: 1.2rem;"></i> Cadastrar Cliente
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Optional: Custom Styles -->
+<style>
+    /* Navbar Customizada */
+    .navbar {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.75rem;
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+        transition: background-color 0.4s ease;
+    }
+
+    /* Título da Navbar */
+    .navbar-brand h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Botão de Cadastrar Cliente */
+    .btn-outline-light {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-light:hover, .btn-outline-light:focus {
+        background-color: #ffffff;
+        color: #2575fc;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Efeito de Sombra ao Passar o Mouse */
+    .shadow-hover:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ajuste de Container para responsividade */
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Espaçamento para os botões */
+    .d-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Ícone do botão */
+    .bi {
+        margin-right: 10px;
+    }
+
+    /* Navbar com sombra */
+    .navbar.shadow-lg {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .navbar-brand h3 {
+            font-size: 1.25rem;
+        }
+
+        .btn-outline-light {
+            font-size: 0.875rem;
+            padding: 0.6rem 1.25rem;
+        }
+    }
+</style>
+
