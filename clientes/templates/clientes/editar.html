@@ -1,0 +1,105 @@
+{% include 'clientes/navbar.html' %}
+
+<div class="container mt-5">
+    <h2 class="fw-bold text-primary mb-4">Editar Cliente</h2>
+
+    <!-- Formulário de edição -->
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Campo Nome -->
+        <div class="mb-4">
+            <label class="form-label">Nome:</label>
+            <input type="text" name="nome" class="form-control form-control-lg" value="{{ cliente.nome }}" required>
+        </div>
+
+        <!-- Campo Email -->
+        <div class="mb-4">
+            <label class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control form-control-lg" value="{{ cliente.email }}" required>
+        </div>
+
+        <!-- Campo Telefone -->
+        <div class="mb-4">
+            <label class="form-label">Telefone:</label>
+            <input type="text" name="telefone" class="form-control form-control-lg" value="{{ cliente.telefone }}" required>
+        </div>
+
+        <!-- Botão de Salvar -->
+        <button type="submit" class="btn btn-success btn-lg">
+            <i class="bi bi-check-circle-fill"></i> Salvar Alterações
+        </button>
+    </form>
+</div>
+
+<!-- Optional: Custom Styles -->
+<style>
+    /* Título */
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #007bff;
+    }
+
+    /* Estilo para o formulário */
+    .form-label {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+
+    /* Botão de Salvar */
+    .btn-lg {
+        font-size: 1.25rem;
+        padding: 0.75rem 2rem;
+        border-radius: 1rem;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ajustes para campos do formulário */
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        .form-control {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-lg {
+            font-size: 1rem;
+            padding: 0.5rem 1.5rem;
+        }
+    }
+</style>
+
